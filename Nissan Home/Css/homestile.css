@@ -1,0 +1,439 @@
+@font-face {
+    font-family: 'Nissan';
+    src: url('../Font/Nissan-Brand-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Nissan';
+    src: url('../Font/Nissan-Brand-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Nissan';
+    src: url('../Font/Nissan-Brand-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nissan';
+    src: url('../Font/Nissan-Brand-Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Nissan", sans-serif;
+    color: #000;
+    overflow-x: hidden;
+}
+
+/* ====================================
+   ANIMACIONES HERO
+==================================== */
+
+@keyframes slideTextIn {
+
+    from {
+        opacity: 0;
+        transform: translateX(-120px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes slideCarIn {
+
+    from {
+        opacity: 0;
+        transform: translateX(220px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+/* ========================================
+   HERO BANNER
+   Este será el CONTROL MAESTRO del color
+======================================== */
+
+.herobanner {
+    width: auto;
+    padding: 30px 0 0 0;
+    min-height: auto;
+
+    /* CAMBIA SOLO ESTE COLOR DE TEXTO EN TODO EL HERO*/
+    color: #fff;
+
+    background-image:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(39, 39, 39, 0) 21%,
+            rgba(255, 255, 255, 0) 90%,
+            rgba(255, 255, 255, 1) 99%
+        ),
+        url("../img/Designer.png");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ========================================
+   ANIMACIÓN
+======================================== */
+
+.data-banner {
+width: 45%;
+opacity: 0;
+animation: slideTextIn .8s ease-out forwards;
+}
+ 
+.car-banner {
+width: 60%;
+opacity: 0;
+animation: slideCarIn 1s ease-out .3s forwards;
+}
+
+/* ========================================
+   CONTENEDOR
+======================================== */
+
+.contenedor {
+    margin: auto;
+    width: min(95%, 1300px);
+}
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logonissan {
+    width: 100px;
+    height: auto;
+}
+
+.logonissan path {
+    fill: currentColor;
+}
+
+
+/* ========================================
+   TOP MENU
+======================================== */
+
+.top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* IMPORTANTE */
+.top-menu a {
+    color: inherit;
+}
+
+
+/* ========================================
+   TÍTULOS
+======================================== */
+
+h1 {
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    line-height: 1;
+    margin: 0;
+    font-weight: 300;
+}
+
+h1 span {
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: 700;
+    line-height: .5;
+}
+
+h2 {
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+h2 span {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 300;
+    line-height: .5;
+}
+
+
+/* ========================================
+   BANNER
+======================================== */
+
+.banner {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.data-banner {
+    width: 45%;
+}
+
+h1 {
+    font-size: clamp(2.8rem, 3vw, 3rem);
+    line-height: 1;
+    margin: 0;
+    font-weight: 300;
+}
+
+h1 span {
+    font-size: clamp(4.5rem, 8vw, 6.5rem);
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* ========================================
+  BANNER/IMAGEN DE CARRO
+======================================== */
+
+.car-banner {
+    width: 60%;
+}
+
+.car-bannerM {
+    display: none;
+}
+
+.car-banner img {
+    width: 110%;
+    height: auto;
+    opacity: 0;
+    animation: slideCarIn 1s ease-out .3s forwards;
+}
+
+.banner-boton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*margin-top: -78px;*/
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* ========================================
+   BOTONES GRAL
+========================================*/
+
+.boton {
+    width: auto;
+    padding: 0 20px;
+    height: 48px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 40px;
+    border: 2px solid currentColor;
+    font-family: "Nissan", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: background-color .3s ease, color .3s ease, transform .25s ease, box-shadow .25s ease;
+    cursor: pointer;
+}
+
+.banner-boton .boton {
+    width: 280px;
+}
+
+.pr {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.pr:hover {
+    background: #4c4c4c;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
+
+.sc {
+    background: transparent;
+    color: #000;
+    border-color: #000;
+}
+
+.sc:hover {
+    background: transparent;
+    border: 3px solid;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+.boton:active {
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   PROMOCIÓN                                   CAMBIO POR IMAGEN
+======================================== */
+
+.promo-financiamiento {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.meses {
+    display: flex;
+    align-items: center;
+}
+
+.numero {
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-weight: 700;
+    line-height: 0.9;
+    margin-right: 18px;
+}
+
+.texto-meses {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.texto-meses .titulo {
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    font-weight: 400;
+}
+
+.texto-meses .subtitulo {
+    font-size: clamp(.8rem, 1.5vw, 1rem);
+}
+
+.separador {
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.comision {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.comision .titulo {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+}
+
+.comision .subtitulo {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 300;
+}
+
+/* ========================================
+   RESPONSIVO
+======================================== */
+
+@media (max-width: 768px) {
+
+    .herobanner {
+        height: auto;
+    }
+
+.data-banner {
+    width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        text-align: center;
+
+}
+
+.car-bannerM {
+    display: block;
+    width: 100%;
+}
+
+.car-bannerM img {
+    width: 100%;
+}
+
+.car-banner {
+    display: none!important;
+}
+
+.top-menu ul {
+    display: none!important;
+}
+
+.top-menu {
+    justify-content: center;
+}
+
+.boton {
+    font-size: 12px;
+    padding: 5px 24px!important;
+}
+
+.contenedor {
+    height: auto;
+}
+
+    .data-banner h1{
+        font-size:1.8rem;
+    }
+
+    .data-banner h1 span{
+        font-size:4rem;
+    }
+
+    .data-banner h2{
+        font-size:1rem;
+        margin-top:10px;
+    }
+
+    .data-banner h2 span{
+        font-size:3rem;
+    }
+
+}
